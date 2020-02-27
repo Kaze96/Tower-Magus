@@ -2,10 +2,10 @@
 
 enum BLOCK_TYPE
 {
-	WALKTHROUGH,//background chip
-	PASSABLE, //can jump up
-	UNPASSABLE, //cannot pass
-	CRITICAL, //killing block
+	WALKTHROUGH,	//背景チップ
+	PASSABLE,		//ジャンプが通れる
+	UNPASSABLE,		//ジャンプが通れない
+	CRITICAL,		//トラップ
 	JUMPPAD,
 	BLOCK_TYPE_MAX
 };

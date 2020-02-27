@@ -25,24 +25,24 @@ void PlayerDraw(void);
 POS_F GetPlayerPos(int id);
 bool PlayerCollideCheck(int id, POS_F enemyPos, POS size);	//プレイヤーが他の物をぶつかるのチェック
 bool GetPlayerFlag(int id);
-POS_F GetPlayerCenterPos(int id);
-POS_F GetAllPlayerAveragePos(void);
+POS_F GetPlayerCenterPos(int id);		//プレイヤーの中心点
+POS_F GetAllPlayerAveragePos(void);		//プレイヤー達の座標の平均
 void PlayerGetHit(int index, DIR damageDirection);		//敵に攻撃される
-int GetPlayerGraphFilter(void);
-int CheckPlayerGraphFilter(int RGB);
-void MoveAllPlayerToStart(void);
-int GetLivingPlayerCount(void);
+int GetPlayerGraphFilter(void);			//画像フィルター
+int CheckPlayerGraphFilter(int RGB);	//設定された色
+void MoveAllPlayerToStart(void);		//エンディング遷移用
+int GetLivingPlayerCount(void);			//生きているプレイヤー数
 int GetPlayerScore(int index);
-void PlayerEndInit(void);
-int GetPlayerImg(int index);
-bool GetPlayerTrapFlag(int index);
+void PlayerEndInit(void);				//エンディングの初期化
+int GetPlayerImg(int index);			//プレイヤー画像
+bool GetPlayerTrapFlag(int index);		
 
 
 typedef struct {
 	POS_F pos;		//座標
 	POS_F hitPosS;	//キャラーの左上の座標
 	POS_F hitPosE;	//キャラーの右下の座標
-	int velocity;
+	int velocity;	//速度
 	bool runFlag;
 	bool atkFlag;
 	bool deathFlag;	
